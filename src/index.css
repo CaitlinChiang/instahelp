@@ -1,0 +1,17 @@
+/* Community Feed */
+
+
+/* Adding a Post */
+#post_section {
+    min-height: 100vh;
+    text-align: center;
+}
+
+#post_add {
+    min-height: 600px;
+    width: 800px;
+    background-color: #808C67;
+    margin: 50px auto;
+}
+
+/* Adding a Helper */
