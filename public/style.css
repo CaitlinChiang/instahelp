@@ -1,0 +1,46 @@
+.home-nav {
+    position: relative;
+    width: 1440px;
+    height: 75px;
+    overflow: hidden;
+  }
+  
+  .home-nav a {
+    float: left;
+    text-align: center;
+    padding: 25px 0px 25px 100px;
+    text-decoration: none;
+
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+
+    color: #F8A830;
+
+  }
+
+  .home-nav.logo {
+    position: absolute;
+    width: 161px;
+    height: 62px;
+    left: 640px;
+    top: 18px;
+    
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
