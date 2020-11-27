@@ -51,6 +51,23 @@ class Post_Add extends Component {
 	    })
     }
 
+    clear = _ => {
+        this.setState({
+            priority: '',
+            photo: '',
+            photo_proof: '',
+            name: '',
+            category: '',
+            province: '',
+            address: '',
+            condition: '',
+            type: '',
+            total_amount: '',
+            voluntary_type: '',
+            contact: ''
+        })
+    }
+
     timestamp = _ => {
         let newDate = new Date()
         
@@ -99,6 +116,7 @@ class Post_Add extends Component {
                 })
 
                 this.photo_add(id)
+                this.clear()
             }
         }
         

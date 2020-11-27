@@ -1,5 +1,15 @@
 /* Community Feed */
+#community_section {
+    min-height: 100vh;
+    text-align: center;
+}
 
+.post {
+    min-height: 400px;
+    width: 500px;
+    margin: auto;
+    background-color: #00ffff;
+}
 
 /* Adding a Post */
 #post_section {
