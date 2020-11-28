@@ -165,16 +165,20 @@ class Helper_Add extends Component {
         return (
             <section id="help_section">
                 <div className="home-nav">
-                    <a className="active" href="/landing_page.js"><img src={logo} height='40px' alt="Logo"/></a>
-                    <a className="active" href="#About">About</a>
+                    <a className="active" href="/"><img src={logo} height='40px' alt="Logo"/></a>
                     <a href="/community">Community</a>
+                    <a href="/partners">Partners Hub</a>
                     <a href="/register-helper">Volunteer</a>
                     <a href="/add-help">Request for Help</a>
-                    <div className="nav-apply">
-                        <button type="button">Login</button>
-                        <button type="button">Register</button>
+                </div>
+
+                <div className="sublanding">
+                    <div className="sublanding-content">
+                        <h1>Volunteer as a helper.</h1>
+                        <p>Register to give secure monetary donations and provide rescue, rebuilding, and aid.</p>
                     </div>
                 </div>
+
                 <form id="post_add">
                     <div>
                         <p>Type of Helper</p>
@@ -233,6 +237,8 @@ class Helper_Add extends Component {
                     </div>
 
                     <div>
+                        <br></br>
+                        <p>Contact Number:</p>
                         <input type="text" value={contact.trim()} name="contact" onChange={this.handleChange} placeholder="ex. 09989034569" />
                     </div>
 

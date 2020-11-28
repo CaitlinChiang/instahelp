@@ -103,16 +103,20 @@ class Community_Feed extends Component {
         return (
             <section id="community_section">
                 <div className="home-nav">
-                    <a className="active" href="/landing_page.js"><img src={logo} height='40px' alt="Logo"/></a>
-                    <a className="active" href="#About">About</a>
+                    <a className="active" href="/"><img src={logo} height='40px' alt="Logo"/></a>
                     <a href="/community">Community</a>
+                    <a href="/partners">Partners Hub</a>
                     <a href="/register-helper">Volunteer</a>
                     <a href="/add-help">Request for Help</a>
-                    <div className="nav-apply">
-                        <button type="button">Login</button>
-                        <button type="button">Register</button>
+                </div>
+
+                <div className="sublanding">
+                    <div className="sublanding-content">
+                        <h1>Donate to your community.</h1>
+                        <p>Give immediate aid to real people who need it most.</p>
                     </div>
                 </div>
+
                 <div id="community_header">
                     <select value={location} name="location" onChange={this.handleChange}>
                         <option value="">- Choose Location -</option>

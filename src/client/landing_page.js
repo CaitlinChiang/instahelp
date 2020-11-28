@@ -15,9 +15,9 @@ class Landing_Page extends Component {
         return (
             <section>
                 <div className="home-nav">
-                    <a className="active" href="/landing_page.js"><img src={logo} height='40px' alt="Logo"/></a>
-                    <a className="active" href="#About">About</a>
+                    <a className="active" href="/"><img src={logo} height='40px' alt="Logo"/></a>
                     <a href="/community">Community</a>
+                    <a href="/partners">Partners Hub</a>
                     <a href="/register-helper">Volunteer</a>
                     <a href="/add-help">Request for Help</a>
                 </div>
@@ -26,10 +26,6 @@ class Landing_Page extends Component {
                         <h1>Be part of a community in service of others.</h1>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
 mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                        <div className="apply">
-                            <button type="button">Login</button>
-                            <button type="button">Register</button>
-                        </div>
                     </div>
                 </div>
                 <div className="about" id="about">

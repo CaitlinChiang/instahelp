@@ -178,13 +178,20 @@ class Post_Add extends Component {
         return (
             <section id="post_form">
                 <div className="home-nav">
-                    <a className="active" href="/landing_page.js"><img src={logo} height='40px' alt="Logo"/></a>
-                    <a className="active" href="#About">About</a>
+                    <a className="active" href="/"><img src={logo} height='40px' alt="Logo"/></a>
                     <a href="/community">Community</a>
+                    <a href="/partners">Partners Hub</a>
                     <a href="/register-helper">Volunteer</a>
                     <a href="/add-help">Request for Help</a>
                 </div>
                 <form id="post_add">
+
+                <div className="sublanding">
+                    <div className="sublanding-content">
+                        <h1>Need help?</h1>
+                        <p>Request for aid from the people around you through one rapid form.</p>
+                    </div>
+                </div>
 
                     <div>
                         <p>Photo of Situation</p>

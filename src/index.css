@@ -5,9 +5,14 @@
 
 #community_section {
     min-height: 100vh;
-    text-align: center;
-    margin: 3em;
     font-family: 'Rubik', sans-serif;
+}
+
+#community_header {
+    text-align: left;
+    margin: 1em;
+    padding-left: 3em;
+    padding: 1em;
 }
 
 .post {
@@ -25,6 +30,10 @@
     font-size: 12px;
     line-height: 10px;
     color: #303030;
+}
+
+#community_contents {
+    display: flex;
 }
 
 .post img {
@@ -61,13 +70,13 @@
 #post_section {
     min-height: 100vh;
     text-align: center;
+    align-items: center;
     font-family: 'Rubik', sans-serif;
 }
 
 #post_add {
     min-height: 600px;
     width: 800px;
-    margin: 50px auto;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -114,22 +123,6 @@
     margin: 0% 0% 0% 0%;
 }
 
-.nav-apply button {
-    width: 180px;
-    height: 35px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-    color: #FFFFFF;
-    background: #F8A830;
-    border-radius: 5px;
-    border: none;
-    margin: 20px 10px 0px 0px;
-}
-
 .apply button {
     width: 180px;
     height: 35px;
@@ -148,13 +141,27 @@
 
 .landing {
     width: 100%;
-    height: 1024px;
+    height: 100%;
 }
 
 .landing-content {
     float: left;
     width: 35%;
     margin: 10%;
+}
+
+.sublanding {
+    width: 100%;
+    height: 400px;
+    background-color: #3454D1;
+    display: inline-block;
+}
+
+.sublanding-content {
+    float: left;
+    width: 35%;
+    margin: 10%;
+    color: #FFFFFF;
 }
 
 .landing-content h1 {
