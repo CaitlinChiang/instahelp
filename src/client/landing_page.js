@@ -17,10 +17,10 @@ class Landing_Page extends Component {
                 <a href="#about">About</a>
                 <a href="#community">Community</a>
                 <div className="logo">
-                    <img src="pics\instahelp.png" class="logo">
+                    <img src="src\client\instahelp.png" class="logo">
                     </img>
                 </div>
-                <button className="button">Login</button>
+                <div className="home-button">Login</div>
             </div>
         )
     }
