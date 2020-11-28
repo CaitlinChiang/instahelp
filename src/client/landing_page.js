@@ -22,10 +22,12 @@ class Landing_Page extends Component {
                     <a href="/add-help">Request for Help</a>
                 </div>
                 <div className="landing">
-                    <div className="landing-content">
-                        <h1>Be part of a community in service of others.</h1>
+                     <div className="landing-content">
+                        <h1>Ask for help. Get help.</h1>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
 mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                    </div>
+                    <div className="landing-pic">
                     </div>
                 </div>
                 <div className="about" id="about">
