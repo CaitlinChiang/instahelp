@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import firebase from '../services/firebaseConfig'
+import logo from '../img/instahelp.png';
 
 class Post_Add extends Component {
     state = {
@@ -176,6 +177,13 @@ class Post_Add extends Component {
 
         return (
             <section id="post_form">
+                <div className="home-nav">
+                    <a className="active" href="/landing_page.js"><img src={logo} height='40px' alt="Logo"/></a>
+                    <a className="active" href="#About">About</a>
+                    <a href="/community">Community</a>
+                    <a href="/register-helper">Volunteer</a>
+                    <a href="/add-help">Request for Help</a>
+                </div>
                 <form id="post_add">
 
                     <div>

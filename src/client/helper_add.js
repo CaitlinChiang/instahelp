@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import firebase from '../services/firebaseConfig'
+import logo from '../img/instahelp.png';
 
 class Helper_Add extends Component {
+
     state = {
         // To Fetch
         provinces: [],
@@ -157,12 +159,23 @@ class Helper_Add extends Component {
     }
 
     render() {
+
         const { provinces, accredited, type, birth_certificate_photo, dti_registration_photo, name, contact, biography, place, service } = this.state
         
         return (
             <section id="help_section">
+                <div className="home-nav">
+                    <a className="active" href="/landing_page.js"><img src={logo} height='40px' alt="Logo"/></a>
+                    <a className="active" href="#About">About</a>
+                    <a href="/community">Community</a>
+                    <a href="/register-helper">Volunteer</a>
+                    <a href="/add-help">Request for Help</a>
+                    <div className="nav-apply">
+                        <button type="button">Login</button>
+                        <button type="button">Register</button>
+                    </div>
+                </div>
                 <form id="post_add">
-                    
                     <div>
                         <p>Type of Helper</p>
                         <button style={{ backgroundColor: type === 'Individual' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'type', 'Individual')}>Individual</button>

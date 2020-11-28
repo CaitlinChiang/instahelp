@@ -74,6 +74,7 @@
 /* Landing Page */
 
 .home-nav {
+    align-items: flex-start;
     position: relative;
     width: 100%;
     height: 75px;
@@ -84,7 +85,7 @@
 .home-nav a {
     float: left;
     text-align: center;
-    padding: 25px 0px 25px 100px;
+    padding: 25px 0px 25px 70px;
     text-decoration: none;
     font-family: 'Rubik', sans-serif;
     font-size: 14px;
@@ -96,9 +97,10 @@
 
 .home-button {
     color: white;
+    align-items: right;
     float: right;
     background-color: #F8A830;
-    display: inline-block;
+    font-family: 'Rubik', sans-serif;
     margin: 25px 0px 15px 100px;
     stroke: 10px, #F8A830;
     border-radius: 1em;
@@ -329,4 +331,9 @@
     /* Colour/Secondary/White 100 (general) */
 
     color: #FFFFFF;
+}
+
+#logo_image {
+    align-items: flex-start;
+    max-width: 20px;
 }

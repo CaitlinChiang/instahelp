@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import firebase from '../services/firebaseConfig'
+import logo from '../img/instahelp.png';
 
 class Helpers_Feed extends Component {
     state = {
@@ -88,6 +89,17 @@ class Helpers_Feed extends Component {
 
         return (
             <section id="community_section">
+                <div className="home-nav">
+                    <a className="active" href="/landing_page.js"><img src={logo} height='40px' alt="Logo"/></a>
+                    <a className="active" href="#About">About</a>
+                    <a href="/community">Community</a>
+                    <a href="/register-helper">Volunteer</a>
+                    <a href="/add-help">Request for Help</a>
+                    <div className="nav-apply">
+                        <button type="button">Login</button>
+                        <button type="button">Register</button>
+                    </div>
+                </div>
                 <div id="community_header">
                     <select value={location} name="location" onChange={this.handleChange}>
                         <option value="">- Choose Location -</option>
