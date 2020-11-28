@@ -7,8 +7,8 @@ class Post_Add extends Component {
         provinces: [],
 
         // To Input
-        priority: '',
         photo: '',
+        priority: '',
         photo_proof: '',
         name: '',
         category: '',
@@ -53,8 +53,8 @@ class Post_Add extends Component {
 
     clear = _ => {
         this.setState({
-            priority: '',
             photo: '',
+            priority: '',
             photo_proof: '',
             name: '',
             category: '',
@@ -171,23 +171,23 @@ class Post_Add extends Component {
     }
 
     render() {
-        const { priority, photo, name, category, province, provinces, address, condition, type, contact } = this.state
+        const { photo, priority, name, category, province, provinces, address, condition, type, contact } = this.state
 
         return (
             <section id="post_form">
                 <form id="post_add">
-                    
-                    <div>
-                        <p>Priority</p>
-                        <button style={{ backgroundColor: priority === 'High' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'priority', 'High')}>High</button>
-                        <button style={{ backgroundColor: priority === 'Medium' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'priority', 'Medium')}>Medium</button>
-                        <button style={{ backgroundColor: priority === 'Low' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'priority', 'Low')}>Low</button>
-                    </div>
 
                     <div>
                         <p>Photo of Situation</p>
                         <input type="file" onChange={this.handleChange_Photos} class="fileInput" />
                         <img src={photo} style={{ width: '200px' }} />
+                    </div>
+
+                    <div>
+                        <p>Priority</p>
+                        <button style={{ backgroundColor: priority === 'High' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'priority', 'High')}>High</button>
+                        <button style={{ backgroundColor: priority === 'Medium' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'priority', 'Medium')}>Medium</button>
+                        <button style={{ backgroundColor: priority === 'Low' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'priority', 'Low')}>Low</button>
                     </div>
 
                     <div>
