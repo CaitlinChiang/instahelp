@@ -7,6 +7,7 @@
     min-height: 100vh;
     text-align: center;
     margin: 3em;
+    font-family: 'Rubik', sans-serif;
 }
 
 .post {
@@ -60,12 +61,14 @@
 #post_section {
     min-height: 100vh;
     text-align: center;
+    font-family: 'Rubik', sans-serif;
 }
 
 #post_add {
     min-height: 600px;
     width: 800px;
     margin: 50px auto;
+    font-family: 'Rubik', sans-serif;
 }
 
 /* Adding a Helper */
@@ -77,7 +80,7 @@
     overflow: hidden;
     font-family: 'Rubik', sans-serif;
 }
-  
+
 .home-nav a {
     float: left;
     text-align: center;
@@ -100,6 +103,10 @@ img.logo {
     width: 10%;
 }
 
+#help_section {
+    font-family: 'Rubik', sans-serif;
+}
+
 .button {
     position: absolute;
     left: 1035px;
@@ -108,7 +115,13 @@ img.logo {
     bottom: 20px;
 
     background: #F8A830;
-    border-radius: 5px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 5px;
+    stroke: 0px, #F8A830;
+    border-radius: 2em;
+    margin: 5px;
 
     width: 140px;
     height: 28px;

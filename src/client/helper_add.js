@@ -45,19 +45,19 @@ class Post_Add extends Component {
         const {accredited, type, contact, provinces, birth_certificate,  birth_certificate_photo, dti_registration, dti_registration_photo, name, biography, areas_served} = this.state
         return (
             <section id="help_section">
-                 <form id="post_add">
+                <form id="post_add">
                     
                     <div>
                         <p>Type of Helper</p>
-                        <button style={{ backgroundColor: type === 'Individual' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'type', 'Individual')}>Individual</button>
-                        <button style={{ backgroundColor: type === 'Group' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'type','Group')}>Group</button>
-                        <button style={{ backgroundColor: type === 'Organization' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'type','Organization')}>Organization</button>
+                        <button style={{ backgroundColor: type === 'Individual' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'type', 'Individual')}>Individual</button>
+                        <button style={{ backgroundColor: type === 'Group' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'type','Group')}>Group</button>
+                        <button style={{ backgroundColor: type === 'Organization' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'type','Organization')}>Organization</button>
                     </div>
 
                     <div>
                         <p>Are you applying for Accreditation?</p>
-                        <button style={{ backgroundColor: accredited === true ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'accredited', true)}>Yes</button>
-                        <button style={{ backgroundColor: accredited === false ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'accredited', false)}>No</button>
+                        <button style={{ backgroundColor: accredited === true ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'accredited', true)}>Yes</button>
+                        <button style={{ backgroundColor: accredited === false ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'accredited', false)}>No</button>
                     </div>
 
                     <div>
