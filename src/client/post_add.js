@@ -184,7 +184,6 @@ class Post_Add extends Component {
                     <a href="/register-helper">Volunteer</a>
                     <a href="/add-help">Request for Help</a>
                 </div>
-                <form id="post_add">
 
                 <div className="sublanding">
                     <div className="sublanding-content">
@@ -193,6 +192,7 @@ class Post_Add extends Component {
                     </div>
                 </div>
 
+                <form id="post_add">
                     <div>
                         <p>Photo of Situation</p>
                         <input type="file" onChange={this.handleChange_Photos} class="fileInput" />
