@@ -8,7 +8,6 @@ function App() {
 		<Router>
 			<Route path="/" component={Client} />
 			<Route path="/pawhfgiowernva4hPQWURILHBW4PJHOPIERNBS4UJGPOE4HWSYJdAPHASJFOSIDJSHGIODFHGDAAPHWIRUSPGO" component={Admin} />
-			<Route path="/community" />
 		</Router>
 	)
 }

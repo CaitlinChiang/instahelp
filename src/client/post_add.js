@@ -112,7 +112,8 @@ class Post_Add extends Component {
                     total_amount: total_amount,
                     voluntary_type: voluntary_type,
                     contact: contact,
-                    date: id
+                    date: id,
+                    approved: false
                 })
 
                 this.photo_add(id)

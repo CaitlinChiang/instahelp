@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import firebase from '../services/firebaseConfig'
 
-class Post_Add extends Component {
+class Helper_Add extends Component {
     state = {
+        // To Fetch
+        provinces: [],
+
+        // To Input
         accredited: false,
         type: '',
         birth_certificate: '',
@@ -12,10 +16,11 @@ class Post_Add extends Component {
         name: '',
         contact: '',
         biography: '',
-        areas_served: '',
-        provinces:[],
+        place: '',
+        service: ''
     }
 
+    componentDidMount = _ => this.provinces_fetch()
 
     // General
     handleChange = event => {
@@ -29,6 +34,60 @@ class Post_Add extends Component {
         this.setState({ [state]: state_value })
     }
 
+    handleChange_Photos = (event, photo_proof) => {
+        event.preventDefault()
+
+        if (photo_proof == 'birth_certificate') {
+            this.setState({ 
+                birth_certificate_photo: URL.createObjectURL(event.target.files[0]),
+                birth_certificate: event.target.files[0]
+            })
+        }
+        else if (photo_proof === 'dti_registration') {
+            this.setState({ 
+                dti_registration_photo: URL.createObjectURL(event.target.files[0]),
+                dti_registration: event.target.files[0]
+            })
+        }
+    }
+
+    sortArray = (array) => {
+	    return array.sort((a, b) => {
+	        var x = a
+	        var y = b
+	        return ((x > y) ? 1 : ((x < y) ? -1 : 0));
+	    })
+    }
+
+    clear = _ => {
+        this.setState({
+            accredited: false,
+            type: '',
+            birth_certificate: '',
+            birth_certificate_photo: '',
+            dti_registration: '',
+            dti_registration_photo: '',
+            name: '',
+            contact: '',
+            biography: '',
+            place: '',
+            service: ''
+        })
+    }
+
+    timestamp = _ => {
+        let newDate = new Date()
+        
+        let month = newDate.getMonth() + 1;
+        let dateToday = newDate.getDate();
+        let year = newDate.getFullYear();
+        let hour = newDate.getHours();
+        let mins = newDate.getMinutes();
+        let sec = newDate.getSeconds();
+
+        return (month < 10 ? (year + '-' + '0' + month) : year + '-' + month) + "-" + (dateToday < 10 ? ('0' + dateToday) : dateToday) + " " + (hour < 10 ? ('0' + hour) : hour) + ":" + (mins < 10 ? ('0' + mins) : mins) + ":" + (sec < 10 ? ('0' + sec) : sec)
+    }
+
     // Fetch
     provinces_fetch = _ => {
         firebase.database().ref('locations').once('value', snapshot => {
@@ -38,11 +97,68 @@ class Post_Add extends Component {
         })
     }
 
+    // Add
+    helper_add = event => {
+        event.preventDefault()
 
-    // Render Data
+        const { accredited, type, name, contact, biography, place, service } = this.state
+
+        const add = _ => {
+            let id = this.timestamp()
+
+            let confirm = window.confirm("Are you sure you would like to publish this entry?")
+            if (confirm) {
+                firebase.database().ref('helpers').child(id).update({
+                    accredited: accredited,
+                    type: type,
+                    name: name,
+                    contact: contact,
+                    biography: biography,
+                    location_help: place,
+                    service: service
+                })
+
+                this.photo_add(id)
+                this.clear()
+            }
+        }
+        
+        if (type.trim() !== '' && name.trim() !== '' && contact.trim() !== '' && biography.trim() !== '' && place.trim() !== '' && service.trim() !== '') {
+            if (Number.isNaN(parseInt(contact))) alert("Kindly only input numbers in the price and contact number field.")
+            else add()
+        }
+        else alert("Kindly fill in all input fields.")
+    }
+
+    photo_add = async id_num => {
+        const { birth_certificate, dti_registration } = this.state
+
+        const data = new FormData()
+
+        data.append('file', birth_certificate)
+        data.append('upload_preset', 'instahelp')
+        data.append('tags', [id_num])
+        const response_birth_certificate = await fetch('https://api.cloudinary.com/v1_1/instahelp/image/upload', { method: 'POST', body: data })
+        const photo_birth_certificate = await response_birth_certificate.json()
+        
+        firebase.database().ref('helpers').child(id_num).update({
+            birth_certificate: photo_birth_certificate.secure_url
+        })
+
+        data.append('file', dti_registration)
+        data.append('upload_preset', 'instahelp')
+        data.append('tags', [id_num])
+        const response_dti_registration = await fetch('https://api.cloudinary.com/v1_1/instahelp/image/upload', { method: 'POST', body: data })
+        const photo_dti_registration = await response_dti_registration.json()
+        
+        firebase.database().ref('helpers').child(id_num).update({
+            dti_registration: photo_dti_registration.secure_url
+        })
+    }
 
     render() {
-        const {accredited, type, contact, provinces, birth_certificate,  birth_certificate_photo, dti_registration, dti_registration_photo, name, biography, areas_served} = this.state
+        const { provinces, accredited, type, birth_certificate_photo, dti_registration_photo, name, contact, biography, place, service } = this.state
+        
         return (
             <section id="help_section">
                  <form id="post_add">
@@ -61,11 +177,18 @@ class Post_Add extends Component {
                     </div>
 
                     <div>
-                        <p>Photo of Situation</p>
-                        <input type="file" onChange={this.handleChange_Photos} class="fileInput" />
-                        <img src={photo} style={{ width: '200px' }} />
-                        {/* Make a note: birth certificate and dti*/}
+                        <p>Photo of Birth Certificate</p>
+                        <input type="file" onChange={event => this.handleChange_Photos(event, 'birth_certificate')} class="fileInput" />
+                        <img src={birth_certificate_photo} style={{ width: '200px' }} />
                     </div>
+
+                    { accredited || type === 'Organization' ?
+                        <div>
+                            <p>Photo of DTI Certification</p>
+                            <input type="file" onChange={event => this.handleChange_Photos(event, 'dti_registration')} class="fileInput" />
+                            <img src={dti_registration_photo} style={{ width: '200px' }} />
+                        </div>
+                    : null }
 
                     <div>
                         <p>Name of Helper/Representative</p>
@@ -77,32 +200,35 @@ class Post_Add extends Component {
                         <input type="text" value={biography} name="biography" onChange={this.handleChange} placeholder="ex. I am a former Lifeline Rescue Team Member" />
                     </div>
 
-
                     <div>
                         <p>Location of Help Needed</p>
-                        {/*add multi-select of provinces*/}
-
-                       
+                        <select value={place} name="place" onChange={this.handleChange}>
+                            <option value="">- Locations to Help -</option>
+                            <option value="Nationwide">Nationwide</option>
+                            { this.sortArray(provinces).map(item => <option value={item}>{item}</option>) }
+                        </select>
                     </div>
 
                     <div>
                         <p>Services Offered:</p>
-                        {/*add multi-select of services*/}
-                     
+                        <select value={service} name="service" onChange={this.handleChange}>
+                            <option value="">- Services Offered -</option>
+                            <option value="Rescue">Rescue</option>
+                            <option value="Rebuild">Rebuild</option>
+                            <option value="Cleanup">Cleanup</option>
+                        </select>
                     </div>
 
                     <div>
                         <input type="text" value={contact.trim()} name="contact" onChange={this.handleChange} placeholder="ex. 09989034569" />
                     </div>
 
-                    <button onClick={this.post_add}>PUBLISH ENTRY</button>
+                    <button onClick={this.helper_add}>APPLY</button>
 
                 </form>
             </section>
         )
-        
     }
-
 }
 
-export default Post_Add
+export default Helper_Add

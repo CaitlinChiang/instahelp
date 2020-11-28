@@ -75,6 +75,7 @@ class Community_Feed extends Component {
                     <p>{props.date}</p>
                     <p>{props.contact}</p>
                     <p>{props.category}</p>
+                    <button>HELP</button>
                 </div>
             )
         }
