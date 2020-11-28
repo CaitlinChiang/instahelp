@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import firebase from '../services/firebaseConfig'
+import Button from 'react-bootstrap/Button';
 
 class Community_Feed extends Component {
     state = {
@@ -66,16 +67,22 @@ class Community_Feed extends Component {
         const post = props => {
             return (
                 <div class="post">
-                    <p>{props.priority}</p>
-                    <p>{props.type} {props.voluntary_type !== '' ? props.voluntary_type : `P${props.total_amount}`}</p>
                     <img src={props.photo} />
+                    <h1>{props.condition}</h1>
+                    <p>
+                        <span class="tag">{props.priority}</span>
+                        <span class="tag">{props.type}</span>
+                        <span class="tag">{props.category}</span>
+                        <span class="tag">{props.province}</span>
+                    </p>
+                    <p>{props.type} {props.voluntary_type !== '' ? props.voluntary_type : `P${props.total_amount}`}</p>
                     <p>{props.condition}</p>
-                    <p>{props.province} {props.address}</p>
+                    <p>{props.address}</p>
                     <p>{props.name}</p>
                     <p>{props.date}</p>
                     <p>{props.contact}</p>
                     <p>{props.category}</p>
-                    <button>HELP</button>
+                    <Button variant="primary">Donate</Button>
                 </div>
             )
         }
