@@ -23,39 +23,25 @@ class Landing_Page extends Component {
                 </div>
                 <div className="landing">
                      <div className="landing-content">
-                        <h1>Ask for help. Get help.</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
-mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                    </div>
-                    <div className="landing-pic">
+                        <h1>We are working towards bridging the gap between people and services.</h1>
                     </div>
                 </div>
                 <div className="about" id="about">
                     <div className="about-content">
                         <h1>We are a hub of volunteers.</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
-mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+                        <p>Our goal is to build a volunteer pipeline for people in need. Our request directory aims to help individuals, organizations, and other institutions forward their needs and services on a public space for emergency response.</p>
                     </div>
                 </div>
                 <div className="register-now">
                     <div className="register-content">
-                        <h1>Register Now</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
-mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                        <div className="apply">
-                            <button type="button">Register</button>
-                        </div>
+                        <h1>Join us now!</h1>
+                        <p>Be part of our community. Be an instant responder or use our services to communicate your needs.</p>
                     </div>
                 </div>
                 <div className="footer">
-                    <div className="level1">
-                        <p>Copy</p>
-                    </div>
                     <hr></hr>
-                    <div className="level2">
-                        <a className="active" href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="community">Community</a>
+                    <div className="level">
+                        <center>Made by Instahelp.</center>
                     </div>
                 </div>
             </section>
