@@ -106,4 +106,3 @@ class Post_Add extends Component {
 }
 
 export default Post_Add
-
