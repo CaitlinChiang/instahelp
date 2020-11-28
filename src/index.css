@@ -1,20 +1,22 @@
 /* Community Feed */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,400&display=swap');
+@import url('bootstrap/dist/css/bootstrap.min.css');
 
 #community_section {
     min-height: 100vh;
     text-align: center;
+    margin: 3em;
 }
 
 .post {
-    min-height: 400px;
-    width: 366px;
-    margin: auto;
+    min-height: 10em;
+    width: 30em;
+    margin: 2em;
     background-color: #FFFFFF;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     border-radius: 1em;
     font-family: 'Rubik', sans-serif;
     font-style: normal;
@@ -25,22 +27,20 @@
 }
 
 .post img {
-    width: 75%;
-    min-width: 320px;
-    min-height: 200px;
-    border-radius: 15px;
-    padding: 20px;
-    opacity: 0.5;
+    max-width: 30em;
+    max-height: 20em;
+    padding: 2em;
 }
 
 .post h1 {
-    height: 21px;
+    height: 2.3em;
     text-align: center;
-    font-size: 20px;
-    line-height: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 2em;
+    line-height: 1.2em;
     text-transform: capitalize;
     color: #3454D1;
-
 }
 
 .tag {
@@ -65,7 +65,6 @@
 #post_add {
     min-height: 600px;
     width: 800px;
-    background-color: #808C67;
     margin: 50px auto;
 }
 
@@ -76,6 +75,7 @@
     width: 1440px;
     height: 75px;
     overflow: hidden;
+    font-family: 'Rubik', sans-serif;
 }
   
 .home-nav a {
@@ -83,16 +83,11 @@
     text-align: center;
     padding: 25px 0px 25px 100px;
     text-decoration: none;
-
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Rubik', sans-serif;
     font-size: 14px;
     line-height: 24px;
-
     display: flex;
     align-items: center;
-
     color: #F8A830;
 }
 
@@ -121,7 +116,7 @@ img.logo {
     right: 265px;
     top: calc(50% - 28px/2 - 0.5px);
 
-    font-family: Helvetica;
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;

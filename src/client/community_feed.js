@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import firebase from '../services/firebaseConfig'
+import Button from 'react-bootstrap/Button';
 
 class Community_Feed extends Component {
     state = {
@@ -80,6 +81,7 @@ class Community_Feed extends Component {
                     <p>{props.name}</p>
                     <p>{props.date}</p>
                     <p>{props.contact}</p>
+                    <Button variant="primary">Donate</Button>{' '}
                 </div>
             )
         }
