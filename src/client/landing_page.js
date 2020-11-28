@@ -17,22 +17,48 @@ class Landing_Page extends Component {
                     <a className="active" href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="community">Community</a>
-                    <div className="apply">
-                        <span class="home-button">Login</span>
-                        <span class="home-button">Register</span>
+                    <div className="nav-apply">
+                        <button type="button">Login</button>
+                        <button type="button">Register</button>
                     </div>
                 </div>
                 <div className="landing">
                     <div className="landing-content">
-                        <h1>Be part of a community that serves others.</h1>
-                        <p>We are working towards building a community for people to contribute their time and resources towards a noble goal. </p>
+                        <h1>Be part of a community in service of others.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
+mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                        <div className="apply">
+                            <button type="button">Login</button>
+                            <button type="button">Register</button>
+                        </div>
                     </div>
                 </div>
-                <div className="about">
+                <div className="about" id="about">
                     <div className="about-content">
                         <h1>We are a hub of volunteers.</h1>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
 mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+                    </div>
+                </div>
+                <div className="register-now">
+                    <div className="register-content">
+                        <h1>Register Now</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
+mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                        <div className="apply">
+                            <button type="button">Register</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="footer">
+                    <div className="level1">
+                        <p>Copy</p>
+                    </div>
+                    <hr></hr>
+                    <div className="level2">
+                        <a className="active" href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="community">Community</a>
                     </div>
                 </div>
             </section>
