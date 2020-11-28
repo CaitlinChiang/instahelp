@@ -63,7 +63,7 @@ class Post_Add extends Component {
                     <div>
                         <p>Photo of Situation</p>
                         <input type="file" onChange={this.handleChange_Photos} class="fileInput" />
-                        <img src={photo} style={{ width: '200px' }} />
+                        <img style={{ width: '200px' }} />
                         {/* Make a note: birth certificate and dti*/}
                     </div>
 
