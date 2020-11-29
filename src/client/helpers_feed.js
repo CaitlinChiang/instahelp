@@ -47,6 +47,7 @@ class Helpers_Feed extends Component {
                     type: snap.val().type,
                     birth_certificate: snap.val().birth_certificate,
                     dti_registration: snap.val().dti_registration,
+                    org_logo: snap.val().org_logo,
                     name: snap.val().name,
                     contact: snap.val().contact,
                     biography: snap.val().biography,
@@ -65,6 +66,7 @@ class Helpers_Feed extends Component {
         const helper = props => {
             return (
                 <div class="post">
+                    <img src={props.org_logo} />
                     <h1>{props.name}</h1>
                     <h5>{props.service}</h5>
                     <p>{props.location_help}</p>
