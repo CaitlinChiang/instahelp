@@ -164,9 +164,9 @@ class Post_Add extends Component {
         else if (type === 'Voluntary') {
             return (
                 <div>
-                    <button style={{ backgroundColor: voluntary_type === 'Rescue' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'voluntary_type', 'Rescue')}>Rescue</button>
-                    <button style={{ backgroundColor: voluntary_type === 'Rebuild' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'voluntary_type', 'Rebuild')}>Rebuild</button>
-                    <button style={{ backgroundColor: voluntary_type === 'Cleanup' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'voluntary_type', 'Rebuild')}>Rebuild</button>
+                    <button style={{ backgroundColor: voluntary_type === 'Rescue' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'voluntary_type', 'Rescue')}>Rescue</button>
+                    <button style={{ backgroundColor: voluntary_type === 'Rebuild' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'voluntary_type', 'Rebuild')}>Rebuild</button>
+                    <button style={{ backgroundColor: voluntary_type === 'Cleanup' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'voluntary_type', 'Rebuild')}>Rebuild</button>
                 </div>
             )
         }
@@ -185,7 +185,7 @@ class Post_Add extends Component {
                     <a href="/add-help">Request for Help</a>
                 </div>
 
-                <div className="sublanding">
+                <div className="sublanding" id="post_add_sublanding">
                     <div className="sublanding-content">
                         <h1>Need help?</h1>
                         <p>Request for aid from the people around you through one rapid form.</p>
@@ -201,9 +201,9 @@ class Post_Add extends Component {
 
                     <div>
                         <p>Priority</p>
-                        <button style={{ backgroundColor: priority === 'High' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'priority', 'High')}>High</button>
-                        <button style={{ backgroundColor: priority === 'Medium' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'priority', 'Medium')}>Medium</button>
-                        <button style={{ backgroundColor: priority === 'Low' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'priority', 'Low')}>Low</button>
+                        <button style={{ backgroundColor: priority === 'High' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'priority', 'High')}>High</button>
+                        <button style={{ backgroundColor: priority === 'Medium' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'priority', 'Medium')}>Medium</button>
+                        <button style={{ backgroundColor: priority === 'Low' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'priority', 'Low')}>Low</button>
                     </div>
 
                     <div>
@@ -213,8 +213,8 @@ class Post_Add extends Component {
 
                     <div>
                         <p>Category of Concern</p>
-                        <button style={{ backgroundColor: category === 'Individual' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'category', 'Individual')}>Individual</button>
-                        <button style={{ backgroundColor: category === 'Community' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'category','Community')}>Community</button>
+                        <button style={{ backgroundColor: category === 'Individual' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'category', 'Individual')}>Individual</button>
+                        <button style={{ backgroundColor: category === 'Community' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'category','Community')}>Community</button>
                     </div>
 
                     <div>
@@ -233,8 +233,8 @@ class Post_Add extends Component {
 
                     <div>
                         <p>Type of Help Needed</p>
-                        <button style={{ backgroundColor: type === 'Monetary' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'type', 'Monetary')}>Monetary</button>
-                        <button style={{ backgroundColor: type === 'Voluntary' ? 'black' : 'grey' }} onClick={event => this.handleChange_Button(event, 'type', 'Voluntary')}>Voluntary</button>
+                        <button style={{ backgroundColor: type === 'Monetary' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'type', 'Monetary')}>Monetary</button>
+                        <button style={{ backgroundColor: type === 'Voluntary' ? '#F8A830': 'white' }} onClick={event => this.handleChange_Button(event, 'type', 'Voluntary')}>Voluntary</button>
 
                         { this.type_extended() }
                     </div>

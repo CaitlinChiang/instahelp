@@ -110,7 +110,7 @@ class Community_Feed extends Component {
                     <a href="/add-help">Request for Help</a>
                 </div>
 
-                <div className="sublanding">
+                <div className="sublanding" id="community_feed_sublanding">
                     <div className="sublanding-content">
                         <h1>Donate to your community.</h1>
                         <p>Give immediate aid to real people who need it most.</p>

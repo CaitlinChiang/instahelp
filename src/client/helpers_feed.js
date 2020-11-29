@@ -100,7 +100,7 @@ class Helpers_Feed extends Component {
                     <a href="/add-help">Request for Help</a>
                 </div>
 
-                <div className="sublanding">
+                <div className="sublanding" id="helpers_feed_sublanding">
                     <div className="sublanding-content">
                         <h1>We're in this together.</h1>
                         <p>Join our hub of volunteer helpers operating independently nationwide.</p>
