@@ -4,9 +4,6 @@
   publish="/build"
   base="/"
 
-  command = "CI= npm add bootstrap react-bootstrap"
-  publish="/build"
-  base="/"
 
 [[redirects]]
   from ="/*"
