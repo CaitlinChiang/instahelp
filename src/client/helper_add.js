@@ -172,7 +172,7 @@ class Helper_Add extends Component {
                     <a href="/add-help">Request for Help</a>
                 </div>
 
-                <div className="sublanding">
+                <div className="sublanding" id="helper_add_sublanding">
                     <div className="sublanding-content">
                         <h1>Volunteer as a helper.</h1>
                         <p>Register to give secure monetary donations and provide rescue, rebuilding, and aid.</p>

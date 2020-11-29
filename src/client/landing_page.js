@@ -22,20 +22,23 @@ class Landing_Page extends Component {
                     <a href="/add-help">Request for Help</a>
                 </div>
                 <div className="landing">
-                     <div className="landing-content">
-                        <h1>We are working towards bridging the gap between people and services.</h1>
+                    <div className="landing-content">
+                        <h1>Rapid response platform for donations and aid.</h1>
+                        <p>The fastest, safest, and most direct avenue to ask and get help in a crisis. </p>
                     </div>
                 </div>
                 <div className="about" id="about">
                     <div className="about-content">
-                        <h1>We are a hub of volunteers.</h1>
-                        <p>Our goal is to build a volunteer pipeline for people in need. Our request directory aims to help individuals, organizations, and other institutions forward their needs and services on a public space for emergency response.</p>
+                        <h1>Emergencies can't wait.</h1>
+                        <br></br>
+                        <p>Traditional systems of emergency relief are slow, old, and broken. Anyone should be able to directly lend a hand during a crisis, especially to victims in our own communities. </p>
+                        <p>We're building a pipeline for anyone to directly see who they can help in a crisis, and for people in need to request for aid quickly, safely, and straight from verifiable sources who care.</p>
                     </div>
                 </div>
                 <div className="register-now">
                     <div className="register-content">
                         <h1>Join us now!</h1>
-                        <p>Be part of our community. Be an instant responder or use our services to communicate your needs.</p>
+                        <p>Ask help, get help. Be part of our community. Be an instant responder or use our services to communicate your needs.</p>
                     </div>
                 </div>
                 <div className="footer">

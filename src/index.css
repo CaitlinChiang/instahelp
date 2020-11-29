@@ -125,7 +125,7 @@
 .apply button {
     width: 180px;
     height: 35px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Rubik", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -140,23 +140,45 @@
 
 .landing {
     width: 100%;
-    height: 1024px;
+    height: 550px;
     background: #ffffff;
+    align-items: center;
     background-image:
-    url('img/landing01.jpeg');
+    url('img/helpers.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .landing-content {
     float: left;
     width: 35%;
-    margin: 30% 0% 0% 10%;
+    font-family: 'Rubik', sans-serif;
+    text-shadow: 4px 4px 10px #000000;
+    margin:15% 0% 0% 10%;
 }
 
 .sublanding {
     width: 100%;
     height: 400px;
     background-color: #3454D1;
+    font-family: 'Rubik', sans-serif;
     display: inline-block;
+}
+
+#community_feed_sublanding {
+    background-color: #d13434;
+}
+
+#helper_add_sublanding {
+    background-color: #3454D1;
+}
+
+#helpers_feed_sublanding {
+    background-color: #2e85cc;
+}
+
+#post_add_sublanding {
+    background-color: #daac2d;
 }
 
 .sublanding-content {
@@ -167,7 +189,7 @@
 }
 
 .landing-content h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Rubik", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
@@ -200,9 +222,8 @@
 }
 
 .about-content h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Rubik", sans-serif;
     font-style: normal;
-    font-weight: bold;
     font-size: 48px;
     line-height: 50px;
     letter-spacing: 1px;
@@ -227,14 +248,13 @@
 
 .register-content {
     float: right;
-    width: 45%;
+    width: 40%;
     margin: 5%;
 }
 
 .register-content h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Rubik", sans-serif;
     font-style: normal;
-    font-weight: bold;
     font-size: 48px;
     line-height: 50px;
     letter-spacing: 1px;
