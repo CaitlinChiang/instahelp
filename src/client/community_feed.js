@@ -78,11 +78,10 @@ class Community_Feed extends Component {
                         <span class="tag">{props.province}</span>
                     </p>
                     <p>{props.type} {props.voluntary_type !== '' ? props.voluntary_type : `P${props.total_amount}`}</p>
-                    <p>{props.condition}</p>
-                    <p>{props.address}</p>
-                    <p>{props.name}</p>
-                    <p>{props.date}</p>
-                    <p>{props.contact}</p>
+                    <p>Name: {props.name}</p>
+                    <p>Address: {props.address}</p>
+                    <p>Date Submitted: {props.date}</p>
+                    <p>Contact Number: {props.contact}</p>
                     <p>{props.category}</p>
                     <Button variant="primary">Donate</Button>
                 </div>

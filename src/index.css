@@ -23,6 +23,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     padding-bottom: 2em;
+    padding-top: 1em;
     border-radius: 1em;
     font-family: 'Rubik', sans-serif;
     font-style: normal;
@@ -49,6 +50,18 @@
     padding-right: 2em;
     font-size: 2em;
     line-height: 1.2em;
+    text-transform: capitalize;
+    color: #3454D1;
+}
+
+#helper_header {
+    height: 1em;
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0px;
+    padding-top: 1em;
+    line-height: 1em;
     text-transform: capitalize;
     color: #3454D1;
 }
@@ -159,7 +172,7 @@
 
 .sublanding {
     width: 100%;
-    height: 400px;
+    height: 360px;
     background-color: #3454D1;
     font-family: 'Rubik', sans-serif;
     display: inline-block;

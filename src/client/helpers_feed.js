@@ -65,12 +65,11 @@ class Helpers_Feed extends Component {
         const helper = props => {
             return (
                 <div class="post">
-                    <p>{props.type}</p>
-                    <p>{props.biography}</p>
-                    <p>{props.accredited === true ? 'Accredited' : 'Not Accredited'}</p>
+                    <h1>{props.name}</h1>
+                    <h5>{props.service}</h5>
                     <p>{props.location_help}</p>
-                    <p>{props.service}</p>
-                    <p>{props.name}</p>
+                    <p>{props.type} : {props.biography}</p>
+                    <p>{props.accredited === true ? 'Accredited' : 'Not Accredited'}</p>
                     <p>{props.contact}</p>
                 </div>
             )
