@@ -11,6 +11,7 @@ class Helper_Add extends Component {
         // To Input
         accredited: false,
         type: '',
+        org_logo:'',
         birth_certificate: '',
         birth_certificate_photo: '',
         dti_registration: '',
@@ -51,6 +52,12 @@ class Helper_Add extends Component {
                 dti_registration: event.target.files[0]
             })
         }
+        else if (photo_proof === 'org_logo') {
+            this.setState({ 
+                org_logo_photo: URL.createObjectURL(event.target.files[0]),
+                org_logo: event.target.files[0]
+            })
+        }
     }
 
     sortArray = (array) => {
@@ -65,6 +72,7 @@ class Helper_Add extends Component {
         this.setState({
             accredited: false,
             type: '',
+            org_logo:'',
             birth_certificate: '',
             birth_certificate_photo: '',
             dti_registration: '',
@@ -133,9 +141,19 @@ class Helper_Add extends Component {
     }
 
     photo_add = async id_num => {
-        const { birth_certificate, dti_registration } = this.state
+        const { org_logo, birth_certificate, dti_registration } = this.state
 
         const data = new FormData()
+
+        data.append('file', org_logo)
+        data.append('upload_preset', 'instahelp')
+        data.append('tags', [id_num])
+        const response_org_logo = await fetch('https://api.cloudinary.com/v1_1/instahelp/image/upload', { method: 'POST', body: data })
+        const photo_org_logo = await response_org_logo.json()
+        
+        firebase.database().ref('helpers').child(id_num).update({
+            org_logo: photo_org_logo.secure_url
+        })
 
         data.append('file', birth_certificate)
         data.append('upload_preset', 'instahelp')
@@ -159,8 +177,7 @@ class Helper_Add extends Component {
     }
 
     render() {
-
-        const { provinces, accredited, type, birth_certificate_photo, dti_registration_photo, name, contact, biography, place, service } = this.state
+        const { provinces, accredited, type, org_logo_photo, birth_certificate_photo, dti_registration_photo, name, contact, biography, place, service } = this.state
         
         return (
             <section id="help_section">
@@ -206,6 +223,12 @@ class Helper_Add extends Component {
                             <img src={dti_registration_photo} style={{ width: '200px' }} />
                         </div>
                     : null }
+
+                    <div>
+                        <p>Photo of Logo/Initiative</p>
+                        <input type="file" onChange={event => this.handleChange_Photos(event,'org_logo')} class="fileInput" />
+                        <img src={org_logo_photo} style={{ width: '200px' }} />
+                    </div>
 
                     <div>
                         <p>Name of Helper/Representative</p>

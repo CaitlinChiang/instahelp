@@ -45,6 +45,7 @@ class Helpers_Feed extends Component {
                     timestamp: snap.key,
                     accredited: snap.val().accredited,
                     type: snap.val().type,
+                    org_logo: snap.val().org_logo,
                     birth_certificate: snap.val().birth_certificate,
                     dti_registration: snap.val().dti_registration,
                     name: snap.val().name,
@@ -65,8 +66,10 @@ class Helpers_Feed extends Component {
         const helper = props => {
             return (
                 <div class="post">
+                    <img src={props.org_logo} />
                     <p>{props.type}</p>
                     <p>{props.biography}</p>
+                    <p></p>
                     <p>{props.accredited === true ? 'Accredited' : 'Not Accredited'}</p>
                     <p>{props.location_help}</p>
                     <p>{props.service}</p>
